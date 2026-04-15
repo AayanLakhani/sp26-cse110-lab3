@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Timer - Kickoff Meeting Minutes</title>
+</head>
+<body>
+  <header>
+    <h1>Pomodoro Timer First Brainstorm</h1>
+    <h2>Meeting Topic: Brainstorming &amp; Initial Planning</h2>
+    <h3>Date: April 14, 2026</h3>
+    <p><strong>Location:</strong> CSE Building, Room 2154</p>
+    <p><strong>Time:</strong> 4:00 PM &ndash; 5:00 PM</p>
+  </header>
+
+  <hr>
+
+  <section>
+    <h2>Attendance</h2>
+    <ul>
+      <li>Alice Nguyen (Team Lead) &check;</li>
+      <li>Bob Martinez (Developer) &check;</li>
+      <li>Carol Zhang (Designer) &check;</li>
+      <li>David Patel (Developer) &check;</li>
+      <li>Emily Thompson (QA) &check;</li>
+      <li><del>Frank Wilson (Developer)</del> &mdash; absent</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Agenda</h2>
+    <ol>
+      <li>Review unfinished business from last meeting</li>
+      <li>Discuss new Pomodoro Timer features</li>
+      <li>Assign initial roles and responsibilities</li>
+      <li>Review architecture diagrams</li>
+      <li>Open floor for questions and concerns</li>
+    </ol>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Unfinished Business</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Owner</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Finalize team name</td>
+          <td>Alice</td>
+          <td>Completed &mdash; team name is <b>&ldquo;Chrono Coders&rdquo;</b></td>
+        </tr>
+        <tr>
+          <td>Set up GitHub repository</td>
+          <td>Bob</td>
+          <td>Completed</td>
+        </tr>
+        <tr>
+          <td>Gather reference apps for inspiration</td>
+          <td>Carol</td>
+          <td>In progress &mdash; will share by Wednesday</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>New Business</h2>
+
+    <h3>1. Core Feature Discussion</h3>
+    <p>The team discussed the <em>minimum viable product</em> (MVP) for the Pomodoro Timer app. The following features were agreed upon for the first sprint:</p>
+    <ul>
+      <li>A configurable countdown timer (default 25 minutes)</li>
+      <li>Short break timer (5 minutes) and long break timer (15 minutes)</li>
+      <li>Start, pause, and reset controls</li>
+      <li>Audio notification when a session ends</li>
+    </ul>
+
+    <h3>2. Stretch Goals</h3>
+    <details>
+      <summary>Click to expand stretch goals</summary>
+      <ul>
+        <li>Task labeling &mdash; let users name what they are working on</li>
+        <li>Session history &mdash; track completed pomodoros over time</li>
+        <li>Dark mode toggle</li>
+        <li>Integration with a to-do list</li>
+      </ul>
+    </details>
+
+    <h3>3. Tech Stack Decision</h3>
+    <p>After a brief discussion, the team voted on the following stack:</p>
+    <dl>
+      <dt><strong>Frontend</strong></dt>
+      <dd>HTML, CSS, and vanilla JavaScript</dd>
+      <dt><strong>Version Control</strong></dt>
+      <dd>Git &amp; GitHub</dd>
+      <dt><strong>Testing</strong></dt>
+      <dd>Jest for unit tests</dd>
+      <dt><strong>Deployment</strong></dt>
+      <dd>GitHub Pages</dd>
+    </dl>
+
+    <h3>4. Role Assignments</h3>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Team Member</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alice Nguyen</td>
+          <td>Team Lead / Scrum Master</td>
+        </tr>
+        <tr>
+          <td>Bob Martinez</td>
+          <td>Lead Developer</td>
+        </tr>
+        <tr>
+          <td>Carol Zhang</td>
+          <td>UI/UX Designer</td>
+        </tr>
+        <tr>
+          <td>David Patel</td>
+          <td>Backend Developer</td>
+        </tr>
+        <tr>
+          <td>Emily Thompson</td>
+          <td>QA / Testing Lead</td>
+        </tr>
+        <tr>
+          <td>Frank Wilson</td>
+          <td>Developer (absent &mdash; to be briefed)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Miscellaneous Comments / Questions / Concerns</h2>
+    <blockquote>
+      <p>&ldquo;Should we consider accessibility from day one? I think we should make sure the timer works with screen readers.&rdquo;</p>
+      <footer>&mdash; Emily Thompson</footer>
+    </blockquote>
+    <blockquote>
+      <p>&ldquo;I&rsquo;d like to research existing Pomodoro apps over the weekend and share a competitive analysis.&rdquo;</p>
+      <footer>&mdash; Carol Zhang</footer>
+    </blockquote>
+    <ul>
+      <li>David asked about using <code>localStorage</code> to persist session data &mdash; team agreed to revisit after MVP.</li>
+      <li>Bob noted that the repo has branch protection rules enabled; all changes require a pull request review.</li>
+      <li>Alice reminded everyone to fill out the <em>when2meet</em> for next week&rsquo;s availability.</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Diagrams &amp; Whiteboard Photos</h2>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Pomodoro_Technique_-_Recipe_Card.png/640px-Pomodoro_Technique_-_Recipe_Card.png"
+           alt="Pomodoro Technique overview diagram showing the cycle of work and break intervals"
+           width="500">
+      <figcaption><em>Fig 1:</em> Pomodoro Technique overview &mdash; presented by Carol during the meeting.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/How_to_use_a_Pomodoro_Timer.jpg/640px-How_to_use_a_Pomodoro_Timer.jpg"
+           alt="Whiteboard sketch of the timer UI layout with start, pause, and reset buttons"
+           width="500">
+      <figcaption><em>Fig 2:</em> Whiteboard sketch of the proposed timer UI layout.</figcaption>
+    </figure>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Meeting Audio Recording</h2>
+    <audio controls>
+      <source src="meeting_audio.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <section>
+    <h2>Meeting Video Recording</h2>
+    <video controls width="640">
+      <source src="PXL_20260415_032453782.mp4" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+  </section>
+
+  <hr>
+
+  <footer>
+    <h2>Action Items</h2>
+    <fieldset>
+      <legend>To-Do Before Next Meeting (April 21, 2026)</legend>
+      <ul>
+        <li><input type="checkbox" disabled> Carol: Share competitive analysis of existing Pomodoro apps</li>
+        <li><input type="checkbox" disabled> Bob: Set up project scaffolding in the GitHub repo</li>
+        <li><input type="checkbox" disabled> David: Draft a data model for session tracking</li>
+        <li><input type="checkbox" disabled> Emily: Write initial test plan for the timer feature</li>
+        <li><input type="checkbox" disabled> Alice: Brief Frank on today&rsquo;s meeting decisions</li>
+        <li><input type="checkbox" disabled> Everyone: Fill out when2meet for next week</li>
+      </ul>
+    </fieldset>
+    <br>
+    <p><strong>Next Meeting:</strong> April 21, 2026 &mdash; 4:00 PM, CSE Building Room 2154</p>
+    <p><em>Minutes recorded by Alice Nguyen</em></p>
+  </footer>
+</body>
+</html>
