@@ -1,9 +1,316 @@
-h2{
-  color: #36190f;
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Manrope:wght@400;600;700&display=swap");
+
+/* Global reset and baseline setup for the meeting-minutes page */
+* {
+  box-sizing: border-box;
 }
 
-h3{
-  color: rgb(49, 15, 54);
+:root {
+  --page-bg: #f5efe6;
+  --panel-bg: hsl(40 39% 95%);
+  --ink: rgb(36 27 22);
+  --accent: #8b4a2a;
+  --accent-soft: hsla(21 54% 45% / 0.2);
+  --elevated-wide: color(display-p3 0.98 0.95 0.9);
+}
+
+#minutes-root,
+body {
+  margin: 0;
+  min-width: 20rem;
+  max-width: 28cm;
+  background-color: #f7f1e8;
+  background-color: var(--elevated-wide, #f7f1e8);
+  color: var(--ink, #2b211b);
+  font-family: "Manrope", sans-serif;
+  line-height: 1.55;
+  width: min(94%, 70rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.25rem 1.1rem 2.5rem 1.1rem;
+}
+
+/* Grid layout with more than two children */
+header {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(14rem, 1fr));
+  grid-template-areas:
+    "title title"
+    "topic topic"
+    "date location"
+    "date time";
+  gap: 0.55rem 1rem;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin: 0.75rem auto 1.25rem auto;
+  padding: 1rem 1rem 0.75rem 1rem;
+  border: 2px solid color-mix(in srgb, var(--accent, #8b4a2a) 65%, white 35%);
+  border-radius: 14px;
+  background: linear-gradient(130deg, rgba(255, 250, 244, 0.95), rgba(247, 236, 220, 0.95));
+}
+
+header > h1 {
+  grid-area: title;
+  margin: 0;
+  font-family: "Fraunces", serif;
+  font-size: clamp(1.45rem, 1.2rem + 1vw, 2rem);
+  color: var(--accent, #8b4a2a);
+  text-align: center;
+  text-decoration: underline;
+}
+
+header > h2 {
+  grid-area: topic;
+  margin: 0;
+  text-align: center;
+  font-size: 1.05rem;
+  color: hsl(16 48% 33%);
+}
+
+header > h3 {
+  grid-area: date;
+  margin: 0;
+  color: rgba(54, 35, 25, 0.92);
+}
+
+header > p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Class selector + selector list */
+.meeting-tag,
+summary {
+  background-color: var(--accent-soft, rgba(139, 74, 42, 0.2));
+  padding: 0.25rem 0.55rem 0.25rem 0.55rem;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+/* Element selector + combining two selectors */
+section.card,
+section {
+  position: relative;
+  margin-top: 1.25rem;
+  margin-right: auto;
+  margin-bottom: 1.25rem;
+  margin-left: auto;
+  padding: 1rem 1rem 1rem 1rem;
+  border: 1px solid #d6c6b7;
+  border-radius: 12px;
+  background-color: var(--panel-bg, #fbf8f3);
+  box-shadow: 0 10px 20px -16px rgba(35, 25, 19, 0.45);
+}
+
+/* Nested selectors (2023 feature) */
+section {
+  & h2 {
+    margin: 0 0 0.4em 0;
+    color: rgb(70, 35, 18);
+    text-align: left;
+  }
+
+  & ul,
+  & ol {
+    margin: 0.65rem 0 0.65rem 1.2em;
+  }
+}
+
+/* Descendant combinator */
+section ul li {
+  padding-bottom: 0.2rem;
+}
+
+/* Adjacent sibling combinator */
+h3 + p {
+  margin-top: 0.2rem;
+}
+
+/* General sibling combinator */
+h3 ~ ul {
+  margin-top: 0.45rem;
+}
+
+/* Attribute selectors */
+img[alt],
+video[controls] {
+  border-radius: 10px;
+  border: 3px solid color-mix(in srgb, #c48c6a 72%, white 28%);
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  accent-color: #8b4a2a;
+}
+
+/* Pseudo-class selectors */
+summary:hover,
+p:hover {
+  color: orange;
+}
+
+summary:active,
+p:active {
+  color: hsl(10 70% 35%);
+}
+
+/* :has() selector */
+section:has(table) {
+  border-color: #b9825f;
+  background-color: color-mix(in srgb, #fff7ed 78%, #f4decb 22%);
+}
+
+/* Text styling */
+h1,
+h2 {
+  letter-spacing: 0.02em;
+}
+
+blockquote {
+  color: #432a1e;
+  text-align: left;
+  text-decoration: none;
+  font-size: 11pt;
+  padding: 0.9rem 1rem 0.9rem 1rem;
+  border-left: 0.08in solid #ad6a47;
+  background-color: hsla(31 70% 92% / 0.75);
+}
+
+blockquote footer {
+  display: inline;
+  font-style: italic;
+}
+
+/* Border longhand declarations */
+table {
+  width: 100%;
+  border-style: solid;
+  border-color: #bb9a82;
+  border-width: 2px;
+  border-radius: 12px;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+}
+
+/* Padding longhand declarations */
+th,
+td {
+  padding-top: 0.55rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.55rem;
+  padding-left: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: rgba(189, 139, 102, 0.24);
+}
+
+audio,
+video {
+  display: block;
+  width: 100%;
+  max-width: 40rem;
+  min-width: 14rem;
+  margin: 0.8rem auto;
+}
+
+img {
+  display: inline-block;
+  width: min(100%, 31.25rem);
+  max-width: 100%;
+  min-width: 13rem;
+  height: auto;
+}
+
+figcaption {
+  margin-top: 0.45rem;
+  text-align: center;
+}
+
+/* Flexbox with > 2 children and 3+ flex properties */
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  list-style: none;
+  padding: 0.6rem 0.8rem 0.6rem 0.8rem;
+  margin: 0.8rem 0 0.8rem 0;
+  background-color: #fff8ef;
+  border-radius: 10px;
+}
+
+/* Display none requirement */
+hr:last-of-type {
+  display: none;
+}
+
+/* Another class selector */
+.is-hidden {
+  display: none;
+}
+
+/* ID selector */
+#next-meeting {
+  font-weight: 700;
+}
+
+fieldset {
+  padding: 0.9rem 1rem 1rem 1rem;
+  border: 2px dashed #bc8e6f;
+  border-radius: 12px;
+  background-color: rgba(255, 246, 234, 0.7);
+}
+
+/* Responsive layout */
+@media (max-width: 40rem) {
+  body {
+    width: 96%;
+    padding: 1rem 0.75rem 2rem 0.75rem;
+  }
+
+  header {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "topic"
+      "date"
+      "location"
+      "time";
+    text-align: left;
+  }
+
+  header > h1,
+  header > h2 {
+    text-align: left;
+  }
+
+  footer ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  img,
+  video {
+    min-width: 0;
+  }
+}
+
+@media (min-width: 40.0625rem) and (max-width: 64rem) {
+  body {
+    width: 92%;
+  }
+
+  footer ul {
+    justify-content: flex-start;
+  }
 }
 
 
