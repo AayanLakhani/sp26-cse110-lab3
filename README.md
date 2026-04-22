@@ -1,2 +1,2 @@
-# Lab 2 - Starter
-https://aayanlakhani.github.io/Lab2_Starter/
+# Lab 3
+https://aayanlakhani.github.io/sp26-cse110-lab3/
