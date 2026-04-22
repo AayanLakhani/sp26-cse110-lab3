@@ -23,18 +23,18 @@ Blockers:
 
 Blockers and impediments:
 |Blocker | Person affected | Resolution owner | Target resolution date|
----------------------------------------------------------------------
+|--------|-------------------|------------------|--------------------|
 |    |   |   |  |
 
 
 Parking lot:
 |Topic flagged for a separate conversation | Who to involve|
----------------------------
+|---------------------|------|
 | | |
 
 Actions:
 |Action| Owner | Due date|
--------------
+|-------|-|-----|
 | | | |
 
 Sprint backlog changes flagged:
