@@ -3,10 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Pomodoro Timer - Kickoff Meeting Minutes</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body{
+      background-color: #f0f0f0;
+    }
+  </style>
 </head>
-<body>
+<body id="minutes-root">
   <header>
-    <h1>Pomodoro Timer First Brainstorm</h1>
+    <h1 style="color: blue; text-align: center;">Pomodoro Timer First Brainstorm</h1>
     <h2>Meeting Topic: Brainstorming &amp; Initial Planning</h2>
     <h3>Date: April 14, 2026</h3>
     <p><strong>Location:</strong> CSE Building, Room 2154</p>
@@ -15,7 +21,7 @@
 
   <hr>
 
-  <section>
+  <section class="card">
     <h2>Attendance</h2>
     <ul>
       <li>Alice Nguyen (Team Lead) &check;</li>
@@ -88,7 +94,7 @@
 
     <h3>2. Stretch Goals</h3>
     <details>
-      <summary>Click to expand stretch goals</summary>
+      <summary class="meeting-tag">Click to expand stretch goals</summary>
       <ul>
         <li>Task labeling &mdash; let users name what they are working on</li>
         <li>Session history &mdash; track completed pomodoros over time</li>
@@ -219,7 +225,7 @@
       </ul>
     </fieldset>
     <br>
-    <p><strong>Next Meeting:</strong> April 21, 2026 &mdash; 4:00 PM, CSE Building Room 2154</p>
+    <p id="next-meeting"><strong>Next Meeting:</strong> April 21, 2026 &mdash; 4:00 PM, CSE Building Room 2154</p>
     <p><em>Minutes recorded by Alice Nguyen</em></p>
   </footer>
 </body>
